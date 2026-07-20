@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Dev Server (Frontend)",
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": ["$vite"],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "dev"
+      }
+    },
+    {
+      "label": "Build Project",
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "Lint Fix",
+      "type": "shell",
+      "command": "npx eslint . --ext .ts,.tsx --fix",
+      "problemMatcher": ["$eslint-stylish"],
+      "presentation": {
+        "reveal": "silent"
+      }
+    },
+    {
+      "label": "Format All Files",
+      "type": "shell",
+      "command": "npx prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+      "presentation": {
+        "reveal": "silent"
+      }
+    },
+    {
+      "label": "Type Check",
+      "type": "shell",
+      "command": "npx tsc --noEmit",
+      "problemMatcher": ["$tsc"],
+      "presentation": {
+        "reveal": "silent"
+      }
+    },
+    {
+      "label": "Clean Install",
+      "type": "shell",
+      "command": "rm -rf node_modules && npm install",
+      "windows": {
+        "command": "Remove-Item -Recurse -Force node_modules; npm install"
+      },
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "Full Stack (Frontend + Backend)",
+      "dependsOn": ["Dev Server (Frontend)"],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    }
+  ]
+}

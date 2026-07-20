@@ -12,6 +12,8 @@
     "usernamehw.errorlens",
     "wix.vscode-import-cost",
     "github.copilot",
-    "Codeium.codeium"
+    "Codeium.codeium",
+    "humao.rest-client",
+    "editorconfig.editorconfig"
   ]
 }
