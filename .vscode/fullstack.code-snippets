@@ -1,0 +1,53 @@
+{
+  "Tailwind Glass Button (Framer Motion)": {
+    "prefix": "!btn-tailwind",
+    "body": [
+      "import { motion } from 'framer-motion';",
+      "",
+      "export default function ${1:Button}() {",
+      "  return (",
+      "    <motion.button",
+      "      whileHover={{ scale: 1.05 }}",
+      "      whileTap={{ scale: 0.95 }}",
+      "      className=\"px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-xl shadow-lg hover:bg-white/20 transition-all\"",
+      "    >",
+      "      ${2:Click Me}",
+      "    </motion.button>",
+      "  );",
+      "}"
+    ],
+    "description": "Creates a modern glassmorphism button with Framer Motion and Tailwind CSS."
+  },
+  "Next.js API Route (App Router)": {
+    "prefix": "!api-next",
+    "body": [
+      "import { NextResponse } from 'next/server';",
+      "",
+      "export async function GET(request: Request) {",
+      "  try {",
+      "    return NextResponse.json({ message: \"${1:Success}\" }, { status: 200 });",
+      "  } catch (error) {",
+      "    return NextResponse.json({ error: \"${2:Internal Server Error}\" }, { status: 500 });",
+      "  }",
+      "}"
+    ],
+    "description": "Standard boilerplate for a Next.js App Router API endpoint."
+  },
+  "React Functional Component (Typed)": {
+    "prefix": "!rfc-type",
+    "body": [
+      "interface ${1:ComponentName}Props {",
+      "  ${2:propName}: ${3:string};",
+      "}",
+      "",
+      "export default function ${1:ComponentName}({ ${2:propName} }: ${1:ComponentName}Props) {",
+      "  return (",
+      "    <div className=\"\">",
+      "      {${2:propName}}",
+      "    </div>",
+      "  );",
+      "}"
+    ],
+    "description": "TypeScript React functional component with props interface."
+  }
+}
